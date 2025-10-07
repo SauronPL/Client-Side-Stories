@@ -1,0 +1,72 @@
+.story-reel-container {
+  padding: 15px 0;
+  background-color: var(--background-light);
+  border-bottom: 1px solid #dbdbdb;
+  overflow-x: auto; /* Włącza przewijanie w poziomie */
+  white-space: nowrap; /* Przechowuje elementy w jednym wierszu */
+  -webkit-overflow-scrolling: touch; /* Płynne przewijanie na iOS */
+}
+
+.story-reel {
+  display: flex; /* Wyrównuje elementy w poziomie */
+  align-items: flex-start; /* Wyrównaje elementy do góry */
+  padding-left: 15px; /* Rozpoczyna wypełnianie bębna */
+}
+
+.story-item {
+  display: inline-flex; /* Zmieniono inline-block na flex dla lepszej kontroli. */
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+  text-align: center;
+  width: 80px; /* Stała szerokość dla każdego elementu */
+  outline: none; /* Usuwa domyślny obrys fokusu, jeśli nie podano niestandardowego */
+}
+.story-item:focus-visible .story-circle { /* Dostępność: wskaźnik główny */
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+
+.story-circle {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px; /* Miejsce na obramowanie gradientu */
+  background: var(--story-border);
+  margin-bottom: 5px;
+  flex-shrink: 0; /* Zapobieganie kurczeniu się koła */
+  transition: background 0.3s ease;
+}
+
+.story-circle.viewed {
+  background: var(--story-seen-border);
+}
+
+.story-circle.add-circle {
+  background: #e0e0e0; /* Neutralne tło dla przycisku dodawania */
+  color: #333;
+}
+.story-circle.add-circle:hover {
+  background: #d0d0d0;
+}
+
+.story-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--background-light); /* Wewnętrzna biała ramka */
+}
+
+.story-username {
+  font-size: 0.75rem;
+  color: var(--text-color);
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Upewnia się, że nazwa użytkownika pozostaje w jednej linii */
+}
