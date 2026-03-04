@@ -48,7 +48,7 @@ npm run preview
 
 Serwer podglądowy uruchomi pliki z `dist/` na krótkim adresie lokalnym.
 
-## 7. Wdrożenie
+## 6. Wdrożenie
 
 Pliki z folderu `dist/` możesz wrzucić na dowolny hosting statyczny (Netlify, Vercel, GitHub Pages, własny serwer WWW itp.).
 
